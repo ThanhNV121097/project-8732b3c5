@@ -12,7 +12,7 @@
 
 .eyebrow {
   display: inline-flex;
-  border: var(--border-width) solid var(--color-border-info);
+  border: var(--border-width) solid var(--color-primary-soft);
   border-radius: var(--radius-full);
   background: var(--color-primary-soft);
   color: var(--color-primary-strong);
@@ -48,8 +48,8 @@
 .pills li {
   border: var(--border-width) solid var(--color-border);
   border-radius: var(--radius-full);
-  background: var(--color-surface-muted);
-  color: var(--color-text-pill);
+  background: var(--color-surface);
+  color: var(--color-text-subtle);
   padding: var(--space-9) var(--space-12);
   font-size: var(--text-sm);
   font-weight: 650;
@@ -86,10 +86,10 @@
   align-items: center;
   align-self: start;
   gap: var(--space-8);
-  border: var(--border-width) solid var(--color-border-success);
+  border: var(--border-width) solid var(--color-success);
   border-radius: var(--radius-full);
   background: var(--color-success-soft);
-  color: var(--color-success-text);
+  color: var(--color-text-subtle);
   padding: var(--space-8) var(--space-11);
   font-size: var(--text-sm-tight);
   font-weight: 760;
@@ -103,9 +103,9 @@
 }
 
 .loading {
-  border-color: var(--color-border-success);
+  border-color: var(--color-success);
   background: var(--color-success-soft);
-  color: var(--color-success-text);
+  color: var(--color-text-subtle);
 }
 
 .empty {
@@ -115,9 +115,9 @@
 }
 
 .error {
-  border-color: var(--color-border-danger);
+  border-color: var(--color-danger);
   background: var(--color-danger-soft);
-  color: var(--color-danger-strong);
+  color: var(--color-danger);
 }
 
 .error span {
@@ -125,7 +125,7 @@
 }
 
 .board {
-  min-height: 444px;
+  min-height: calc((var(--space-64) * 6) + var(--space-48) + var(--space-12));
   padding: var(--space-22);
 }
 
@@ -182,7 +182,7 @@
 }
 
 .errorCard {
-  border-color: var(--color-border-danger);
+  border-color: var(--color-danger);
   background: var(--color-danger-soft);
 }
 
@@ -200,23 +200,23 @@
   display: block;
   width: 100%;
   height: var(--space-14);
-  max-width: 320px;
+  max-width: calc(var(--space-64) * 5);
   border-radius: var(--radius-full);
   background: var(--color-primary-soft);
   animation: pulse var(--duration-shimmer) var(--easing-linear) infinite;
 }
 
 .skeletonShort {
-  max-width: 220px;
+  max-width: calc((var(--space-64) * 3) + var(--space-28));
 }
 
 .retry {
   border: var(--border-width) solid var(--color-danger);
   border-radius: var(--radius-full);
   background: var(--color-danger);
-  color: var(--color-primary-text);
+  color: var(--color-surface);
   padding: var(--space-10) var(--space-14);
-  box-shadow: var(--shadow-danger-action);
+  box-shadow: var(--shadow-lg);
   font-size: var(--text-sm-tight);
   font-weight: 760;
   cursor: pointer;
@@ -224,8 +224,8 @@
 }
 
 .retry:hover {
-  border-color: var(--color-danger-strong);
-  background: var(--color-danger-strong);
+  border-color: var(--color-danger);
+  background: var(--color-danger);
 }
 
 @keyframes enter {
@@ -241,7 +241,7 @@
   50% { opacity: .45; }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 53.75em) {
   .shell {
     grid-template-columns: 1fr;
     gap: var(--space-16);
