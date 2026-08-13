@@ -51,8 +51,8 @@ export default function DisplaySavedNotes() {
         <p className={styles.lead}>Read existing saved notes in one calm, read-only list.</p>
         <ul className={styles.pills} aria-label="Scope facts">
           <li>Read-only</li>
-          <li>No auth</li>
-          <li>No search</li>
+          <li>Public</li>
+          <li>One list</li>
         </ul>
       </div>
 
