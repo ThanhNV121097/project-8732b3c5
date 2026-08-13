@@ -108,7 +108,7 @@ function renderState(state: ViewState, retry: () => void) {
   return (
     <ul className={styles.list} aria-label="Saved notes list" aria-live="polite">
       {state.notes.map((note) => (
-        <li className="note-card" key={note.id}>
+        <li className={styles.noteCard} key={note.id}>
           <article className={styles.note}>
             <p>{note.content}</p>
             <time dateTime={note.updated_at}>Updated {formatDate(note.updated_at)}</time>
