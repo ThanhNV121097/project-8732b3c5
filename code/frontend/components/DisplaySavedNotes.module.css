@@ -1,4 +1,53 @@
 .shell {
+  --color-surface-muted: rgba(255,255,255,.75);
+  --color-border-info: #DBEAFE;
+  --color-border-success: #A7F3D0;
+  --color-border-danger: #FECACA;
+  --color-danger-strong: #B91C1C;
+  --color-success: #10B981;
+  --color-success-text: #047857;
+  --color-text-pill: #334155;
+  --color-primary-text: #FFFFFF;
+  --color-shadow-note: rgba(15,23,42,.08);
+  --color-shadow-danger: rgba(220,38,38,.18);
+  --space-0: 0;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-9: 9px;
+  --space-10: 10px;
+  --space-11: 11px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-22: 22px;
+  --space-24: 24px;
+  --space-34: 34px;
+  --space-48: 48px;
+  --space-52: 52px;
+  --space-64: 64px;
+  --text-xs: 12px;
+  --text-sm-tight: 13px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 22px;
+  --text-hero: clamp(42px,7vw,76px);
+  --radius-dot: 50%;
+  --border-width: 1px;
+  --border-width-focus: 3px;
+  --border-width-loader: 4px;
+  --shadow-note-hover: 0 14px 30px var(--color-shadow-note);
+  --shadow-danger-action: 0 12px 24px var(--color-shadow-danger);
+  --duration-fast: .18s;
+  --duration-state: .24s;
+  --duration-loader: .85s;
+  --duration-shimmer: 1.3s;
+  --easing: ease;
+  --easing-linear: linear;
   display: grid;
   gap: var(--space-34);
   padding-block: var(--space-52);
@@ -254,5 +303,5 @@
 }
 
 @keyframes fadeState {
-  from { opacity: 0; transform: translateY(var(--space-6)); }
+  from { opacity: var(--space-0); transform: translateY(var(--space-6)); }
 }
