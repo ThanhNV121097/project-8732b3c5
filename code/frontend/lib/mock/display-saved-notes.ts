@@ -56,22 +56,11 @@ const failure: NotesErrorResponse = {
   },
 };
 
-let callCount = 0;
-
 export async function getSavedNotes(): Promise<NotesResponse> {
-  callCount += 1;
   await new Promise((resolve) => setTimeout(resolve, 600));
 
   if (process.env.NEXT_PUBLIC_NOTES_MOCK_STATE === "empty") return emptyNotes;
   if (process.env.NEXT_PUBLIC_NOTES_MOCK_STATE === "error") throw failure;
 
   return populatedNotes;
-}
-
-export function resetSavedNotesMock() {
-  callCount = 0;
-}
-
-export function getSavedNotesMockCallCount() {
-  return callCount;
 }
