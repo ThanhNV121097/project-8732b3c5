@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useCallback, useEffect, useState } from "react";
 import { getSavedNotes, type Note, type NotesErrorResponse } from "../lib/mock/display-saved-notes";
