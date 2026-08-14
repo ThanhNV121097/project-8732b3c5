@@ -18,6 +18,13 @@ function formatDate(value: string) {
   return new Intl.DateTimeFormat("en", { dateStyle: "medium", timeStyle: "short" }).format(new Date(value));
 }
 
+function statusLabel(state: ViewState) {
+  if (state.kind === "loaded") return "Loaded";
+  if (state.kind === "empty") return "Empty";
+  if (state.kind === "error") return "Error";
+  return "Loading";
+}
+
 export default function DisplaySavedNotes() {
   const [state, setState] = useState<ViewState>({ kind: "loading" });
 
@@ -63,7 +70,8 @@ export default function DisplaySavedNotes() {
             <p className={styles.panelCopy}>Loaded from database contract shape.</p>
           </div>
           <span className={`${styles.status} ${styles[state.kind]}`}>
-            <span aria-hidden="true" />{state.kind === "loaded" ? "Loaded" : state.kind === "empty" ? "Empty" : state.kind === "error" ? "Error" : "Loading"}
+            <span aria-hidden="true" />
+            {statusLabel(state)}
           </span>
         </header>
 
